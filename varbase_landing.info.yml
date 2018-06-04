@@ -1,6 +1,10 @@
 name: 'Varbase Landing'
 description: 'Provides the basis for Landing Pages, which are built to include appealing stacked components that are visually separate.'
 type: module
+package: Varbase
+version: 8.x-5.x-dev
+core: 8.x
+project: varbase_landing
 dependencies:
   - advanced_text_formatter
   - ds
@@ -25,7 +29,3 @@ dependencies:
   - varbase_webform
   - viewsreference
   - yoast_seo
-package: Varbase
-version: 8.x-5.x-dev
-core: 8.x
-project: varbase
