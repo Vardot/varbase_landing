@@ -13,6 +13,8 @@ dependencies:
   - node
   - paragraphs
   - paragraphs_previewer
+  - paragraphs_features
+  - paragraphs_asymmetric_translation_widgets
   - path
   - pathauto
   - rabbit_hole
