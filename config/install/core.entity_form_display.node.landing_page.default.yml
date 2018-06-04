@@ -12,6 +12,7 @@ dependencies:
     - field_group
     - maxlength
     - metatag
+    - paragraphs_features
     - paragraphs_previewer
     - path
     - yoast_seo
@@ -30,6 +31,7 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Page content'
+      region: hidden
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -63,10 +65,20 @@ content:
       title: Component
       title_plural: Components
       edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
       add_mode: modal
       form_display_mode: default
       default_paragraph_type: _none
-    third_party_settings: {  }
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: add_above
+    third_party_settings:
+      paragraphs_features:
+        delete_confirmation: true
+        add_in_between: true
+        split_text: true
     region: content
   field_meta_tags:
     weight: 5
@@ -77,7 +89,8 @@ content:
   field_yoast_seo:
     weight: 9
     settings:
-      body: field_description
+      edit_title: false
+      edit_description: false
     third_party_settings: {  }
     type: yoast_seo_widget
     region: content
@@ -85,7 +98,8 @@ content:
     type: language_select
     weight: 0
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -93,6 +107,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 1
@@ -120,6 +141,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   promote: true
   sticky: true
