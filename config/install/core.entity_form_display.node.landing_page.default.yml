@@ -89,8 +89,7 @@ content:
   field_yoast_seo:
     weight: 9
     settings:
-      edit_title: false
-      edit_description: false
+      body: field_description
     third_party_settings: {  }
     type: yoast_seo_widget
     region: content
