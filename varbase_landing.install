@@ -77,3 +77,21 @@ function varbase_landing_update_8006() {
     \Drupal::service('module_installer')->install(['paragraphs_previewer'], FALSE);
   }
 }
+
+/**
+ * Enable Paragraphs Features module.
+ */
+function varbase_landing_update_8007() {
+  if (!\Drupal::moduleHandler()->moduleExists('paragraphs_features')) {
+    \Drupal::service('module_installer')->install(['paragraphs_features'], FALSE);
+  }
+}
+
+/**
+ * Enable Paragraphs Asymmetric Translation Widgets module.
+ */
+function varbase_landing_update_8008() {
+  if (!\Drupal::moduleHandler()->moduleExists('paragraphs_asymmetric_translation_widgets')) {
+    \Drupal::service('module_installer')->install(['paragraphs_asymmetric_translation_widgets'], FALSE);
+  }
+}
