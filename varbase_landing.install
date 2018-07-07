@@ -95,3 +95,21 @@ function varbase_landing_update_8008() {
     \Drupal::service('module_installer')->install(['paragraphs_asymmetric_translation_widgets'], FALSE);
   }
 }
+
+/**
+ * Updated the new default form display for the landing page content type.
+ */
+function varbase_landing_update_8009() {
+  if (\Drupal::moduleHandler()->moduleExists('paragraphs_features')
+    && \Drupal::moduleHandler()->moduleExists('paragraphs_asymmetric_translation_widgets')) {
+    $module_path = Drupal::service('module_handler')->getModule('varbase_landing')->getPath() . '/config/';
+
+    $config_path = $module_path . 'core.entity_form_display.node.landing_page.default.yml';
+    $config_content = file_get_contents($config_path);
+    $config_data = (array) Yaml::parse($config_content);
+    $config_factory = \Drupal::configFactory()->getEditable('core.entity_form_display.node.landing_page.default');
+    $config_factory->setData($config_data)->save(TRUE);
+  }
+}
+
+
