@@ -30,7 +30,11 @@
     "composer/installers": "^1.5.0",
     "oomphinc/composer-installers-extender": "^1.1.2",
     "cweagans/composer-patches": "^1.6.4",
-    "drupal/drupal-library-installer-plugin": "^0.3"
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "drupal/varbase_media": "6.*",
+    "drupal/varbase_bootstrap_paragraphs": "6.*",
+    "drupal/paragraphs_features": "^1.4",
+    "drupal/paragraphs_asymmetric_translation_widgets": "^1.0-alpha2"
   },
   "extra": {
     "branch-alias": {
