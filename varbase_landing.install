@@ -102,7 +102,7 @@ function varbase_landing_update_8008() {
 function varbase_landing_update_8009() {
   if (\Drupal::moduleHandler()->moduleExists('paragraphs_features')
     && \Drupal::moduleHandler()->moduleExists('paragraphs_asymmetric_translation_widgets')) {
-    $module_path = Drupal::service('module_handler')->getModule('varbase_landing')->getPath() . '/config/';
+    $module_path = Drupal::service('module_handler')->getModule('varbase_landing')->getPath() . '/config/install/';
 
     $config_path = $module_path . 'core.entity_form_display.node.landing_page.default.yml';
     $config_content = file_get_contents($config_path);
