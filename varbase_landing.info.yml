@@ -8,6 +8,9 @@ project: varbase_landing
 dependencies:
   - varbase_bootstrap_paragraphs:varbase_bootstrap_paragraphs
 install:
+  - user
+  - node
+  - menu_ui
   - varbase_seo
   - paragraphs_features
   - paragraphs_asymmetric_translation_widgets
