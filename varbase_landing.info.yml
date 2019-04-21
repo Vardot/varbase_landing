@@ -14,3 +14,6 @@ install:
   - varbase_seo
   - paragraphs_features
   - paragraphs_asymmetric_translation_widgets
+  - length_indicator
+  - advanced_text_formatter
+  - maxlength

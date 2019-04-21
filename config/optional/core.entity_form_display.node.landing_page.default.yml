@@ -10,6 +10,7 @@ dependencies:
   module:
     - advanced_text_formatter
     - field_group
+    - length_indicator
     - maxlength
     - metatag
     - paragraphs_features
@@ -22,7 +23,7 @@ third_party_settings:
       children:
         - field_lp_paragraphs
       parent_name: ''
-      weight: 8
+      weight: 3
       format_type: details
       format_settings:
         label: 'Page content'
@@ -31,7 +32,7 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Page content'
-      region: hidden
+      region: content
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -39,13 +40,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   field_description:
     type: string_textarea
-    weight: 6
+    weight: 2
     region: content
     settings:
       rows: 5
@@ -74,6 +75,7 @@ content:
         duplicate: duplicate
         collapse_edit_all: collapse_edit_all
         add_above: add_above
+      closed_mode_threshold: 0
     third_party_settings:
       paragraphs_features:
         delete_confirmation: true
@@ -81,7 +83,7 @@ content:
         split_text: true
     region: content
   field_meta_tags:
-    weight: 5
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -102,7 +104,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 4
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -110,7 +112,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
@@ -120,6 +122,12 @@ content:
       size: 60
       placeholder: 'Enter title here'
     third_party_settings:
+      length_indicator:
+        indicator: true
+        indicator_opt:
+          optimin: 15
+          optimax: 50
+          tolerance: 10
       maxlength:
         maxlength_js: null
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
@@ -127,13 +135,13 @@ content:
         show_token_tree: 0
     region: content
   translation:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -141,7 +149,7 @@ content:
     third_party_settings: {  }
     region: content
   url_redirects:
-    weight: 50
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
