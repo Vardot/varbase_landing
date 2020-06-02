@@ -2,10 +2,7 @@ name: 'Varbase Landing'
 description: 'Provides the basis for Landing Pages, which are built to include appealing stacked components that are visually separate.'
 type: module
 package: Varbase
-version: 8.x-7.x-dev
-core: 8.x
 core_version_requirement: ^8 || ^9
-project: varbase_landing
 dependencies:
   - varbase_bootstrap_paragraphs:varbase_bootstrap_paragraphs
   - varbase_bootstrap_paragraphs:vbp_text_and_image
