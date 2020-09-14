@@ -35,7 +35,7 @@
     "drupal/varbase_media": "~7.0",
     "drupal/varbase_seo": "~6.0",
     "drupal/varbase_bootstrap_paragraphs": "~7.0",
-    "drupal/paragraphs_features": "~1.0",
+    "drupal/paragraphs_features": "1.10",
     "drupal/paragraphs_asymmetric_translation_widgets": "~1.0",
     "drupal/length_indicator": "~1.0",
     "drupal/advanced_text_formatter": "~2.0",
@@ -50,6 +50,12 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/paragraphs_features": {
+        "Issue #3170771: Fix CKEditor error on Uncaught TypeError: Cannot read property split_text of undefined":
+        "https://www.drupal.org/files/issues/2020-09-14/3170771-3.patch"
+      }
+    }
   }
 }
