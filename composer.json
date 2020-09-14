@@ -53,7 +53,7 @@
     "composer-exit-on-patch-failure": true,
     "patches": {
       "drupal/paragraphs_features": {
-        "Issue #3170771: Fix CKEditor error on Uncaught TypeError: Cannot read property split_text of undefined":
+        "Issue #3170771: Fix CKEditor error on Uncaught TypeError: Cannot read property split_text of undefined.":
         "https://www.drupal.org/files/issues/2020-09-14/3170771-3.patch"
       }
     }
