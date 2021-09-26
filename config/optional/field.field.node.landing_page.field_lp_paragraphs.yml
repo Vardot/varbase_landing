@@ -24,13 +24,13 @@ field_name: field_lp_paragraphs
 entity_type: node
 bundle: landing_page
 label: Components
-description: ''
+description: ""
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:paragraph'
+  handler: "default:paragraph"
   handler_settings:
     negate: 0
     target_bundles:
