@@ -39,7 +39,7 @@
     "drupal/paragraphs_asymmetric_translation_widgets": "1.0-beta4",
     "drupal/length_indicator": "~1.0",
     "drupal/advanced_text_formatter": "~2.0",
-    "drupal/maxlength": "~1.0"
+    "drupal/maxlength": "~2.0"
   },
   "extra": {
     "enable-patching": true,
