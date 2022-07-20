@@ -33,23 +33,17 @@
     "drupal/core": "~9.0",
     "vardot/entity-definition-update-manager": "~1.0",
     "vardot/module-installer-factory": "~1.0",
-    "drupal/varbase_media": "~9.0.0 || 9.0.x-dev",
+    "drupal/varbase_media": "~9.0 || 9.0.x-dev",
     "drupal/varbase_seo": "^9 || 9.0.x-dev",
-    "drupal/varbase_bootstrap_paragraphs": "~9.0.0 || 9.0.x-dev",
+    "drupal/varbase_bootstrap_paragraphs": "~9.0 || 9.0.x-dev",
     "drupal/paragraphs_features": "~1.0",
-    "drupal/paragraphs_asymmetric_translation_widgets": "1.0-beta4",
+    "drupal/paragraphs_asymmetric_translation_widgets": "~1.0",
     "drupal/length_indicator": "~1.0",
     "drupal/advanced_text_formatter": "~2.0",
     "drupal/maxlength": "~2.0"
   },
   "extra": {
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true,
-    "patches": {
-      "drupal/paragraphs_asymmetric_translation_widgets": {
-        "Issue #3180118: Fix Render #pre_render callbacks must be methods of a class that implements Drupal Core Security TrustedCallbackInterface for Field group":
-        "https://www.drupal.org/files/issues/2020-11-01/3180118-2.patch"
-      }
-    }
+    "composer-exit-on-patch-failure": true
   }
 }
