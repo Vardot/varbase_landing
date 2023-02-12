@@ -36,7 +36,7 @@
     "drupal/varbase_media": "~10.0 || 10.0.x-dev",
     "drupal/varbase_seo": "~10.0 || 10.0.x-dev",
     "drupal/varbase_bootstrap_paragraphs": "~10.0 || 10.0.x-dev",
-    "drupal/paragraphs_features": "~1.0",
+    "drupal/paragraphs_features": "~2.0",
     "drupal/paragraphs_asymmetric_translation_widgets": "~1.0",
     "drupal/length_indicator": "~1.0",
     "drupal/advanced_text_formatter": "~3.0",
