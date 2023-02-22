@@ -9,7 +9,7 @@ type: "canonical_entities:node"
 pattern: "[node:menu-link:parents:join-path]/[node:title]"
 selection_criteria:
   c9a11b79-2468-47b8-9eed-4e4b98c0f757:
-    id: node_type
+    id: entity_bundle:node
     bundles:
       landing_page: landing_page
     negate: false
