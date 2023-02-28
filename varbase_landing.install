@@ -13,21 +13,21 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_landing_install() {
 
-  // Processer for install: in varbase_landing.info.yml file using ModuleInstallerFactory.
-  // ---------------------------------------------------------------------------.
+  // Processor for install: in varbase_landing.info.yml file.
   ModuleInstallerFactory::installList('varbase_landing');
 
   // Install optional configs.
   ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_landing', '/^field.storage.*\\.(yml)$/i');
   ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_landing', '/^.*(settings.yml)$/i');
 
-  // --------------------------------------------------------------------------.
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
   \Drupal::classResolver()
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_landing');
 }
 
 /**
@@ -66,7 +66,7 @@ function varbase_landing_update_8701() {
  */
 function varbase_landing_update_90001() {
   // Set the weight of the module after installation of list of modules.
-  // To make sure that any hook or event subscriber workes after all used modules.
+  // To make sure that any hook or event subscriber workers after all used modules.
   ModuleInstallerFactory::setModuleWeightAfterInstallation('varbase_landing');
 }
 
