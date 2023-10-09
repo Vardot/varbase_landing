@@ -13,8 +13,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_landing_install() {
 
-  // Processer for install: in varbase_landing.info.yml file using ModuleInstallerFactory.
-  // ---------------------------------------------------------------------------.
+  // Processor for install: in varbase_landing.info.yml file.
   ModuleInstallerFactory::installList('varbase_landing');
 
   // Install optional configs.
@@ -27,6 +26,9 @@ function varbase_landing_install() {
   \Drupal::classResolver()
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_landing');
 
 }
 
