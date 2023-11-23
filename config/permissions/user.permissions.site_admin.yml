@@ -1,0 +1,7 @@
+id: site_admin
+permissions:
+  - 'create landing_page content'
+  - 'delete any landing_page content'
+  - 'edit any landing_page content'
+  - 'revert landing_page revisions'
+  - 'view landing_page revisions'
