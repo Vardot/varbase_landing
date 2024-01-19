@@ -36,7 +36,7 @@
     "drupal/varbase_media": "~9",
     "drupal/varbase_seo": "~9",
     "drupal/varbase_bootstrap_paragraphs": "~9",
-    "drupal/paragraphs_features": "~1 || ~2",
+    "drupal/paragraphs_features": "~2",
     "drupal/paragraphs_asymmetric_translation_widgets": "~1",
     "drupal/length_indicator": "~1",
     "drupal/advanced_text_formatter": "~2 || ~3",
