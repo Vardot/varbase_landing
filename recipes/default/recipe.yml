@@ -1,0 +1,43 @@
+name: Varbase Landing Page (Paragraphs) - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+install:
+  - user
+  - node
+  - menu_ui
+  - paragraphs_features
+  - paragraphs_asymmetric_translation_widgets
+  - length_indicator
+  - advanced_text_formatter
+  - maxlength
+config:
+  actions:
+    user.role.authenticated:
+      grantPermissions:
+        - 'delete own landing_page content'
+        - 'edit own landing_page content'
+    user.role.editor:
+      grantPermissions:
+        - 'create landing_page content'
+        - 'edit any landing_page content'
+        - 'view landing_page revisions'
+    user.role.content_admin:
+      grantPermissions:
+        - 'create landing_page content'
+        - 'delete any landing_page content'
+        - 'edit any landing_page content'
+        - 'revert landing_page revisions'
+        - 'view landing_page revisions'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'create landing_page content'
+        - 'delete any landing_page content'
+        - 'edit any landing_page content'
+        - 'view landing_page revisions'
+    user.role.site_admin:
+      grantPermissions:
+        - 'create landing_page content'
+        - 'delete any landing_page content'
+        - 'edit any landing_page content'
+        - 'revert landing_page revisions'
+        - 'view landing_page revisions'
