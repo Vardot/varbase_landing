@@ -1,6 +1,0 @@
-id: seo_admin
-permissions:
-  - 'create landing_page content'
-  - 'delete any landing_page content'
-  - 'edit any landing_page content'
-  - 'view landing_page revisions'
