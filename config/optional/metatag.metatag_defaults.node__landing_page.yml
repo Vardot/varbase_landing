@@ -6,3 +6,5 @@ label: "Content: Landing page"
 tags:
   title: "[node:title] | [site:name]"
   description: "[node:field_description]"
+  og_image: "[node:share-image]"
+  og_image_url: "[node:share-image]"
