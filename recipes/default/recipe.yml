@@ -11,6 +11,10 @@ install:
   - advanced_text_formatter
   - maxlength
 config:
+  import:
+    varbase_landing:
+      - field.field.node.landing_page.field_description
+      - field.field.node.landing_page.field_lp_paragraphs
   actions:
     user.role.authenticated:
       grantPermissions:
