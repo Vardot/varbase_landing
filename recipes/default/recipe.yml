@@ -10,10 +10,8 @@ install:
   - length_indicator
   - advanced_text_formatter
   - maxlength
+  - vbp_text_and_image
 config:
-  strict: false
-  import:
-    varbase_landing: "*"
   actions:
     user.role.authenticated:
       grantPermissions:

@@ -11,7 +11,7 @@ third_party_settings:
 name: "Landing page (Paragraphs)"
 type: landing_page
 description: "Use <em>Landing pages</em> to build multi-component pages with custom layouts to display content in a modern way."
-help: ""
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
