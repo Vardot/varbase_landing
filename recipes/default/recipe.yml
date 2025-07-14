@@ -10,7 +10,6 @@ install:
   - length_indicator
   - advanced_text_formatter
   - maxlength
-  - vbp_text_and_image
 config:
   actions:
     user.role.authenticated:

@@ -17,6 +17,7 @@ dependencies:
     - paragraphs.paragraphs_type.bp_view
     - paragraphs.paragraphs_type.bp_webform
     - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.text_and_image
   module:
     - entity_reference_revisions
 id: node.landing_page.field_lp_paragraphs
@@ -47,6 +48,7 @@ settings:
       bp_view: bp_view
       bp_webform: bp_webform
       from_library: from_library
+      text_and_image: text_and_image
     target_bundles_drag_drop:
       bp_accordion:
         enabled: true
@@ -92,6 +94,9 @@ settings:
         weight: 29
       from_library:
         weight: 30
+        enabled: true
+      text_and_image:
+        weight: 32
         enabled: true
 
 field_type: entity_reference_revisions

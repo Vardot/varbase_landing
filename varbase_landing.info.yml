@@ -5,4 +5,5 @@ package: Varbase
 core_version_requirement: ~11.2.0
 dependencies:
   - varbase_bootstrap_paragraphs:varbase_bootstrap_paragraphs
+  - varbase_bootstrap_paragraphs:vbp_text_and_image
   - varbase_seo:varbase_seo
