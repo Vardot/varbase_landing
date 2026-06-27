@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: landing_editor
+label: 'Landing editor'
+weight: 5
+is_admin: false
+permissions: {  }
