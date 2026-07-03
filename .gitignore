@@ -4,3 +4,5 @@ node_modules
 
 # Ignore yarn cache
 .yarn/
+# Ignore gitlab-ci-local artifacts
+.gitlab-ci-local/

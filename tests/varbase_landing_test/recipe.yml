@@ -1,0 +1,22 @@
+name: 'Varbase Landing Page Test'
+description: 'Provisions a Standard site with the Landing page content type (and its Varbase dependencies, installed separately in CI), the Landing editor role with landing_page permissions, and the admin theme for content forms, for the automated tests.'
+type: 'Testing'
+config:
+  strict: false
+  actions:
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    user.role.landing_editor:
+      grantPermissions:
+        - 'create landing_page content'
+        - 'edit own landing_page content'
+    user.role.editor:
+      grantPermissions:
+        - 'create landing_page content'
+        - 'edit any landing_page content'
+    user.role.content_admin:
+      grantPermissions:
+        - 'create landing_page content'
+        - 'delete any landing_page content'
+        - 'edit any landing_page content'
