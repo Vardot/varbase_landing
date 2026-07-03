@@ -121,14 +121,10 @@ webship-js-test:
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT pm:install varbase_seo -y
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT pm:install varbase_bootstrap_paragraphs -y
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT pm:install varbase_landing -y
-    # Front-end theme (Bootstrap) for the landing pages.
-    - composer config --no-plugins allow-plugins.vardot/varbase-patches true || true
-    - composer --working-dir=$CI_PROJECT_DIR require "drupal/vartheme_bs4:9.0.x-dev" --no-interaction || true
-    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT theme:install vartheme_bs4 -y
     # Apply the test recipe: creates the Landing page content type and the Page
-    # description field, sets vartheme_bs4 as default and uses the admin theme for
-    # content forms.
-    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT recipe $CI_PROJECT_DIR/tests/varbase_landing_test -y
+    # description field, and grants the landing_page permissions. The Standard
+    # default theme (Olivero) is kept; vartheme_bs4 is not Drupal 11.4-installable.
+    - php $CI_PROJECT_DIR/vendor/bin/dr recipe $CI_PROJECT_DIR/tests/varbase_landing_test
     # Role and test users for the access matrix (drush, no PHP).
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT user:create normaluser --mail="normaluser@example.test" --password="dD.123123ddd" || true
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT user:create landinguser --mail="landinguser@example.test" --password="dD.123123ddd" || true
@@ -152,6 +148,10 @@ webship-js-test:
 
 # Allow the Varbase stack Composer plugins in the CI build (allow-plugins lives in varbase_project, not modules).
 composer:
+  variables:
+    # Drupal 11.4.0 released 2026-07-01; pinned templates ref $CORE_STABLE is still 11.3.
+    DRUPAL_CORE: "11.4.0"
+    IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
   before_script:
     - composer config --no-plugins allow-plugins.composer/installers true || true
     - composer config --no-plugins allow-plugins.cweagans/composer-patches true || true
@@ -163,4 +163,7 @@ composer:
     - composer config --no-plugins allow-plugins.php-http/discovery true || true
     - composer config --no-plugins allow-plugins.tbachert/spi true || true
     - composer config --no-plugins allow-plugins.vardot/varbase-patches true || true
-    - composer require --no-update vardot/varbase-patches:~9.2.0
+    - composer require --no-update vardot/varbase-patches:9.2.x-dev
+    # Pin the Varbase stack to its 9.2.x/10.0.x dev branches (11.4-ready) instead of
+    # the older stable releases that cap at Drupal ~11.3.
+    - composer require --no-update drupal/varbase_media:9.2.x-dev drupal/varbase_seo:9.2.x-dev drupal/varbase_bootstrap_paragraphs:9.2.x-dev

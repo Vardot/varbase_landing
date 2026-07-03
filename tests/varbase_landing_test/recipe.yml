@@ -1,12 +1,9 @@
 name: 'Varbase Landing Page Test'
-description: 'Provisions a Standard site with the Landing page content type (and its Varbase dependencies, installed separately in CI), the Landing editor role with landing_page permissions, and vartheme_bs4 as the default theme, for the automated tests.'
+description: 'Provisions a Standard site with the Landing page content type (and its Varbase dependencies, installed separately in CI), and the Landing editor role with landing_page permissions, for the automated tests.'
 type: 'Testing'
 config:
   strict: false
   actions:
-    system.theme:
-      simpleConfigUpdate:
-        default: vartheme_bs4
     node.settings:
       simpleConfigUpdate:
         use_admin_theme: true
