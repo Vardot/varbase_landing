@@ -1,3 +1,7 @@
+[![pipeline status](https://git.drupalcode.org/project/varbase_landing/badges/9.2.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_landing/-/pipelines)
+[![Varbase Landing Page (Paragraphs)](https://img.shields.io/badge/Varbase%20Landing%20Page%20(Paragraphs)-9.2.4-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase_landing/-/pipelines?ref=9.2.4)
+[![Automated Functional Testing](https://git.drupalcode.org/project/varbase_landing/badges/9.2.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_landing/-/pipelines)
+
 # Varbase Landing
 ---
 
